@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>링크 이동</title>
+    </head>
+    <body>
+        <!--
+            a 태그: 어떤 링크/대상으로 이동하는 태그
+            href 속성: 이동할 경로
+            target: 어떻게 띄울 건지
+                _blank: 새창
+                _self: 현재창
+        -->
+
+        <a href="https://www.naver.com/" target="_self" title="네이버링크">네이버 이동</a>
+        <br>
+        <a href="https://www.google.com/" target="_blank" title="구글링크">구글 이동</a>
+        <br>
+
+        <a href="tag03.html" target="_self">tag03.html로 이동</a>
+        <br>
+        <a href="./tag03.html" target="_self">tag03.html로 이동</a> <!-- 현재 경로 --> <br>
+        <a href="../start.html" target="_self">start.html로 이동</a> <!-- 상위 경로 --> <br>
+        <a href="../quiz/quiz01.html" target="_self">quiz01.html로 이동</a>
+
+        <!-- . 현재경로 .. 한 단계 상위경로 -->
+
+
+        <!--
+            이미지태그 이미지표시 img
+            src속성: 보여줄 이미지 소스경로
+        -->
+
+        <img src="puppy01.jpg" alt="강아지사진"> <!-- 현재 파일과 동일경로 -->
+        <img src="./puppy01.jpg" alt="강아지사진"> <!-- 현재 파일과 동일경로 -->
+        <img src="./img/puppy02.jpg" alt="포메라니안사진"> <!-- 하위 폴더 경로 -->
+
+        <br><br>
+        <!-- 상위 다른 폴더 경로 -->
+        <img src="../../images/puppy01.jpg" alt="강아지사진">
+        <img src="../../images/puppy02.jpg" alt="포메라니안사진">
+
+        <!-- 외부 이미지 링크 주소를 통해서 연결 -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJcYZEYBUFqsst5bO3No2yiPUu62ytbrkM3w&s" alt="근접한강아지사진">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRCUDsly0rb2AmIgDRuob_4-NBDrvnQbVzew&s" alt="포메라니안사진">
+        
+    
+        <br><br>
+
+        <!-- 링크 a 태그 내부에 이미지 사용 -->
+        <a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EC%95%84%EC%A7%80" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRCUDsly0rb2AmIgDRuob_4-NBDrvnQbVzew&s" alt="포메라니안사진">
+        </a>
+
+
+    </body>
+</html>
