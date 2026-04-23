@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>연습문제 3번</title>
+    </head>
+    <body>
+        <form>
+            <label for="name">고객명:</label>
+            <input type="text" id="name"><br><br>
+            <label for="tel">전화번호:</label>
+            <input type="tel"><br><br>
+            <label for="email">이메일:</label>
+            <input type="email"><br>
+            
+            <p>
+                <label for="selectCf">피자선택:</label>
+                <select id="selectCf">
+                    <option value="1">피자를 선택하세요</option>
+                    <option value="2">페페로니</option>
+                    <option value="3">포테이포</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>피자 사이즈</legend>
+                <label><input type="radio" name="size">Small<br></label><br>
+                <label><input type="radio" name="size">Medium<br></label><br>
+                <label><input type="radio" name="size">Large<br></label><br>
+            </fieldset>
+            <fieldset>
+                <legend>토핑 선택</legend>
+                    <input type="checkbox"><label>베이컨<br></label><br>
+                    <input type="checkbox"><label>치즈<br></label><br>
+                    <input type="checkbox"><label>양파<br></label><br>
+                    <input type="checkbox"><label>버섯<br></label><br>
+            </fieldset>
+            <br>
+            희망배송시간: <input type="time"><br>
+            <p><label>배송 시 요청사항: </label>
+                <textarea></textarea>
+            </p>
+            <input type="submit" value="주문하기">
+        </form>
+        
+    </body>
+</html>
