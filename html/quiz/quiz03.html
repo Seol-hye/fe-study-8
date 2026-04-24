@@ -7,42 +7,34 @@
     </head>
     <body>
         <form>
-            <label for="name">고객명:</label>
-            <input type="text" id="name"><br><br>
-            <label for="tel">전화번호:</label>
-            <input type="tel"><br><br>
-            <label for="email">이메일:</label>
-            <input type="email"><br>
-            
-            <p>
-                <label for="selectCf">피자선택:</label>
-                <select id="selectCf">
-                    <option value="1">피자를 선택하세요</option>
-                    <option value="2">치즈</option>
-                    <option value="3">페페로니</option>
-                    <option value="4">콤비네이션</option>
-                </select>
-            </p>
+            사용자 ID : <input type="text"> <br>
+            비밀 번호 : <input type="password">
+            <button type="button">완료</button> <br><br>
 
-            <fieldset>
-                <legend>피자 사이즈</legend>
-                <label><input type="radio" name="size">Small</label><br><br>
-                <label><input type="radio" name="size">Medium</label><br><br>
-                <label><input type="radio" name="size">Large</label><br><br>
-            </fieldset>
-            <fieldset>
-                <legend>토핑 선택</legend>
-                    <label><input type="checkbox">베이컨</label><br><br>
-                    <label><input type="checkbox">치즈</label><br><br>
-                    <label><input type="checkbox">양파</label><br><br>
-                    <label><input type="checkbox">버섯</label><br><br>
-            </fieldset>
+            <select>
+                <option>짜장면</option>
+                <option selected>짬뽕</option>
+                <option>탕수육</option>
+            </select>
             <br>
-            희망배송시간: <input type="time"><br>
-            배송 시 요청사항: <textarea></textarea>
-        
-            <button type="submit">주문하기</button>
+
+            <label>짜장면<input type="checkbox"></label>
+            <label>짬뽕<input type="checkbox" checked></label>
+            <label>탕수육<input type="checkbox"></label><br>
+
+            이름 : <input type="text"> <br>
+            암호 : <input type="password"> <br>
+            자소서: <textarea style="width: 155px; height: 70px;">이곳에 자기소개서 작성</textarea> <br><br>
+
+            검색: <input type="text">
+            <input type="button" value="Q1">
+            <button type="button">Q2</button><br>
+
+            submit 버튼: <input type="submit" value="전송1">
+            <button type="submit">전송2</button><br>
+
+            reset 버튼: <input type="reset" value="리셋1">
+            <button type="reset">리셋2</button>
         </form>
-        
     </body>
 </html>

@@ -4,37 +4,105 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>연습문제 4번</title>
+        <style>
+            table, th, td {
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
     </head>
     <body>
-        <form>
-            사용자 ID : <input type="text"> <br>
-            비밀 번호 : <input type="password">
-            <button type="button">완료</button> <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>지역구분</th>
+                    <th colspan="2">지역명</th>
+                    <!-- <th>지역명</th> -->
+                </tr>
+            </thead>
 
-            <select>
-                <option>짜장면</option>
-                <option selected>짬뽕</option>
-                <option>탕수육</option>
-            </select>
             <br>
 
-            <label>짜장면<input type="checkbox"></label>
-            <label>짬뽕<input type="checkbox" checked></label>
-            <label>탕수육<input type="checkbox"></label><br>
+            <tbody>
+                <tr>
+                    <td rowspan="2">서울</td>
+                    <td>강남</td>
+                    <td>서초</td>
+                </tr>
 
-            이름 : <input type="text"> <br>
-            암호 : <input type="password"> <br>
-            자소서: <textarea style="width: 155px; height: 70px;">이곳에 자기소개서 작성</textarea> <br><br>
+                <tr>
+                    <!-- <td>서울</td> -->
+                    <td>잠실</td>
+                    <td>송파</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">천안</td>
+                    <td>봉명</td>
+                    <td>쌍용</td>
+                </tr>
+                <tr>
+                    <!-- <td>천안</td> -->
+                    <td>신부</td>
+                    <td>두정</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br><br><br>
 
-            검색: <input type="text">
-            <input type="button" value="Q1">
-            <button type="button">Q2</button><br>
+        <table>
+            <thead>
+                <tr>
+                    <td rowspan="2">식당명</td>
+                    <td colspan="2">영업시간</td>
+                    <!-- <td>영업시간</td> -->
+                    <td rowspan="2">메뉴</td>
+                </tr>
+                <tr>
+                    <!-- <td>식당명</td> -->
+                    <td>시작시간</td>
+                    <td>종료시간</td>
+                    <!-- <td>메뉴</td> -->
+                </tr>
+            </thead>
 
-            submit 버튼: <input type="submit" value="전송1">
-            <button type="submit">전송2</button><br>
+            <br>
 
-            reset 버튼: <input type="reset" value="리셋1">
-            <button type="reset">리셋2</button>
-        </form>
+            <tbody>
+                <tr>
+                    <td rowspan="2">달식당</td>
+                    <td rowspan="2">10:00</td>
+                    <td rowspan="2">21:00</td>
+                    <td>돈까스</td>
+                </tr>
+                <tr>
+                    <!--
+                    <td>달식당</td>
+                    <td>10:00</td>
+                    <td>21:00</td>
+                    -->
+                    <td>김밥</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">맘스터치</td>
+                    <td rowspan="2">11:00</td>
+                    <td rowspan="2">18:00</td>
+                    <td>햄버거</td>
+                </tr>
+                <tr>
+                    <td>치킨</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">김밥나라</td>
+                    <td rowspan="2">8:00</td>
+                    <td rowspan="2">20:00</td>
+                    <td>떡볶이</td>
+                </tr>
+                <tr>
+                    <td>비빔밥</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

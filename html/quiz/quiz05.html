@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>연습문제 5번</title>
         <style>
             table, th, td {
                 border:1px solid black;
@@ -12,97 +12,60 @@
         </style>
     </head>
     <body>
-        <table>
-            <thead>
-                <tr>
-                    <th>지역구분</th>
-                    <th colspan="2">지역명</th>
-                    <!-- <th>지역명</th> -->
-                </tr>
-            </thead>
+        <h1>나의 점심 취향 설문조사</h1>
+
+        <form>
+            이름: <input type="text"> <br><br>
+
+            <fieldset>
+                <legend>학년 선택</legend>
+                <table>
+                    <tr> <!-- 하나의 행 -->
+                        <th>번호</th>
+                        <th>학년</th>
+                        <th>선택</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>1학년</td>
+                        <td><input type="radio" name="grade"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>2학년</td>
+                        <td><input type="radio" name="grade"></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>3학년</td>
+                        <td><input type="radio" name="grade"></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td><label for="rd4">4학년</label></td>
+                        <td><input type="radio" name="grade" id="rd4"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>좋아하는 음식(복수 선택 가능)</legend>
+                    <label><input type="checkbox">한식</label> <br>
+                    <label><input type="checkbox">중식</label> <br>
+                    <label><input type="checkbox">일식</label> <br>
+                    <label><input type="checkbox">양식</label> <br>
+                    <label><input type="checkbox">분식</label>
+            </fieldset>
 
             <br>
 
-            <tbody>
-                <tr>
-                    <td rowspan="2">서울</td>
-                    <td>강남</td>
-                    <td>서초</td>
-                </tr>
+            <button type="submit">제출하기</button>
 
-                <tr>
-                    <!-- <td>서울</td> -->
-                    <td>잠실</td>
-                    <td>송파</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">천안</td>
-                    <td>봉명</td>
-                    <td>쌍용</td>
-                </tr>
-                <tr>
-                    <!-- <td>천안</td> -->
-                    <td>신부</td>
-                    <td>두정</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <br><br><br>
-
-        <table>
-            <thead>
-                <tr>
-                    <td rowspan="2">식당명</td>
-                    <td colspan="2">영업시간</td>
-                    <!-- <td>영업시간</td> -->
-                    <td rowspan="2">메뉴</td>
-                </tr>
-                <tr>
-                    <!-- <td>식당명</td> -->
-                    <td>시작시간</td>
-                    <td>종료시간</td>
-                    <!-- <td>메뉴</td> -->
-                </tr>
-            </thead>
-
-            <br>
-
-            <tbody>
-                <tr>
-                    <td rowspan="2">달식당</td>
-                    <td rowspan="2">10:00</td>
-                    <td rowspan="2">21:00</td>
-                    <td>돈까스</td>
-                </tr>
-                <tr>
-                    <!--
-                    <td>달식당</td>
-                    <td>10:00</td>
-                    <td>21:00</td>
-                    -->
-                    <td>김밥</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">맘스터치</td>
-                    <td rowspan="2">11:00</td>
-                    <td rowspan="2">18:00</td>
-                    <td>햄버거</td>
-                </tr>
-                <tr>
-                    <td>치킨</td>
-                </tr>
-
-                <tr>
-                    <td rowspan="2">김밥나라</td>
-                    <td rowspan="2">8:00</td>
-                    <td rowspan="2">20:00</td>
-                    <td>떡볶이</td>
-                </tr>
-                <tr>
-                    <td>비빔밥</td>
-                </tr>
-            </tbody>
-        </table>
+        </form>
     </body>
 </html>
