@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: 700px;
+                height: 500px;
+                border: 1px solid black;
+                margin: 50px auto;
+            }
+
+
+            /*-------------상단 Header 영역-------------*/
+            .header {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* .h-left, .h-right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                } */
+
+            .h-left {
+                width: 200px;
+                background-color: red;
+                
+            }
+
+            .h-right {
+                width: 100px;
+                background-color: red;
+            }
+            
+            /*-------------main 영역-------------*/
+            .main {
+                width: 100%;
+                height: 300px;
+
+                display: flex;
+            }
+            .section {
+                background-color: orange;
+                width: 70%;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* align-items: center; */
+                align-content: center;
+            }
+
+            .article {
+                width: 100px;
+                height: 50px;
+                margin: 30px;
+                background-color: black;
+                transition: 0.3s;
+            }
+
+            .article:hover {
+                transform: scale(1.2);
+            }
+
+            .aside {
+                width: 30%;
+                background-color: green;
+            }
+
+            .footer {
+                background-color: blue;
+                width: 100%;
+                height: 100px;
+            }
+
+            .color-white {
+                color: white;
+            }
+
+            .align-center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="header color-white">
+
+                <div class="h-left align-center">메인메뉴</div>
+                <div class="h-right align-center">마이페이지</div>
+
+            </div>
+
+            <div class="main">
+                <div class="section">
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                </div>
+                <div class="aside color-white align-center">aside</div>
+
+            </div>
+
+            <div class="footer color-white align-center">footer</div>
+
+        </div>
+        
+    </body>
+</html>
