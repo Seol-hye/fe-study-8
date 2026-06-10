@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 필요시 작성 */
+
+        .bh-gray {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+    <script>
+        /* 코드 작성 부분 */
+
+        let cnt1 = 0;
+        function changeMain() {
+            cnt1++;
+            console.log('changeMain() 호출됨');
+
+            if (cnt1 % 2 == 1) {
+                document.getElementById('main').style.backgroundColor = 'gray';
+            } else {
+                document.getElementById('main').style.backgroundColor = '';
+            }
+
+           // document.getElementById('main').classList.toggle('bg-gray');
+        }
+
+        let flag = false;
+        //let cnt2 = 0;
+        function changeP1() {
+            //cnt2++;
+            console.log('changeP1() 호출됨');
+
+            // if (cnt2 % 2 == 1) {
+            //     document.getElementById('p1').style.color = 'red';
+            // } else {
+            //     document.getElementById('p1').style.color = '';
+            // }
+
+            // if (document.getElementById('p1').style.color == 'red') {
+            //     document.getElementById('p1').style.color = '';
+            // } else {
+            //     document.getElementById('p1').style.color = 'red';
+            // }
+
+            if (flag == false) {
+                document.getElementById('p1').style.color = 'red';
+                flag = true;
+            } else {
+                document.getElementById('p1').style.color = '';
+                flag = false;
+            }
+        }
+
+
+        let index = 1;
+        let textArr = ['p2 텍스트', 'p2 하나', 'p2 둘', 'p2 셋', 'p2 넷'];
+        //let cnt3 = 0;
+        function changeP2() {
+            //cnt3++;
+            console.log('changeP2() 호출됨');
+
+            // if (cnt3 % 5 == 1) {
+            //     document.getElementById('p2').textContent = '하나';
+            // } else if (cnt3 % 5 == 2) {
+            //     document.getElementById('p2').textContent = '둘';
+            // } else if (cnt3 % 5 == 3) {
+            //     document.getElementById('p2').textContent = '셋';
+            // } else if (cnt3 % 5 == 4) {
+            //     document.getElementById('p2').textContent = '넷';
+            // } else {
+            //     document.getElementById('p2').textContent = 'p2 텍스트';
+            // }
+
+            const p2 = document.getElementById('p2');
+
+            p2.textContent = textArr[index];
+            index++;
+            index = index % textArr.length;
+
+            // if(index > 4) {
+            //     index = 0;
+            // }
+
+            // if(p2.textContent == 'p2 텍스트') {
+            //     p2.textContent = 'p2 하나';
+            // } else if(p2.textContent == 'p2 하나') {
+            //     p2.textContent = 'p2 둘';
+            // } else if(p2.textContent == 'p2 둘') {
+            //     p2.textContent = 'p2 셋';
+            // } else if(p2.textContent == 'p2 셋') {
+            //     p2.textContent = 'p2 넷';
+            // } else {
+            //     p2.textContent = 'p2 텍스트';
+            // }
+        }
+
+    </script>
+</body>
+
+</html>
