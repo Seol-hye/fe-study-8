@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="loginId" placeholder="아이디"><br>
+    <input type="password" id="loginPw" placeholder="비밀번호"><br>
+    <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br>
+
+    <script>
+        //코드작성
+
+        const input_id = document.getElementById('loginId');
+        const input_pw = document.getElementById('loginPw');
+        
+        function tryLogin(){
+            input_id.value = "";
+            input_pw.value = "";
+        }
+
+        input_id.addEventListener('keydown', (event) => {
+        
+            //console.log(event.key);
+            if (event.key == 'Enter') {
+                input_pw.focus();
+            }
+        })
+
+        input_pw.addEventListener('keydown', (event) => {
+
+            if (event.key == 'Enter') {
+                tryLogin();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

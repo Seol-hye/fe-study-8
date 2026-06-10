@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form_id">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <!-- <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br> -->
+        <button id="btnLogin" type="submit">로그인 시도</button><br>
+    </form>
+
+    <script>
+        //코드작성
+
+        const input_id = document.getElementById('loginId');
+        const input_pw = document.getElementById('loginPw');
+
+        function tryLogin() {
+
+            input_id.value = "";
+            input_pw.value = "";
+        }
+
+        input_id.addEventListener('keydown', (event) => {
+
+            if (event.key == 'Enter') {
+                event.preventDefault();
+                input_pw.focus();
+            }
+        });
+
+        input_pw.addEventListener('keydown', (event) => {
+
+            if (event.key == 'Enter') {
+                event.preventDefault();
+                tryLogin();
+            }
+        });
+
+        const form_id = document.getElementById('form_id');
+
+        form_id.addEventListener('submit', (event)=>{
+            event.preventDefault();
+
+            input_id.value = input_id.value.trim();
+            input_pw.value = input_pw.value.trim();
+
+            if(input_id.value == ''){
+                alert('아이디 필수 입력');
+                input_id.focus();
+                return;
+            }
+
+            if(input_pw.value == ''){
+                alert('비밀번호 필수 입력');
+                input_pw.focus();
+                return;
+            }
+
+            //form_id.submit();
+            tryLogin();
+            alert('submit 수행 완료');
+        })
+
+    </script>
+</body>
+
+</html>
